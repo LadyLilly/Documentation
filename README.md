@@ -34,3 +34,17 @@ In ES6 it's possible to create lambda/arrow functions like this
 ```js
 () => { }
 ```
+
+### String Methods
+ES6 also introduces some new string methods
+
+#### Template Literals
+Template literals enable the usage of placeholders for string substitution using `${ }` syntax
+
+**Example:**
+```js
+let test = 'test';
+let string = `This is a ${test}`;
+
+// Output: This is a test
+```
