@@ -1,6 +1,5 @@
 # Documentation
-Some documentation
-
+Documentation about JavaScript ES6+ features
 
 ## JS
 
