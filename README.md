@@ -70,3 +70,15 @@ librayName.testFunction();
 import { LibraryName } fron 'libraryPath';
 LibraryName.testFunction();
 ```
+
+#### Default parameters
+ES6 introduces default parameters.
+```javascript
+const logName(name = 'defaultName') {
+    console.log(name);
+};
+
+logName('TestName'); // Output: TestName
+
+logName(); // Output: defaultName
+```
