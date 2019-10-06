@@ -15,7 +15,7 @@ let test = 'test';
 ```
 
 #### Const
-Variables created with the `const` keyword are a read-only reference to a value and cannot be reassigned.
+Variables created with the `const` keyword are a read-only (immutable) reference to a value and cannot be reassigned.
 
 **Example:**
 ```js
@@ -46,4 +46,27 @@ let test = 'test';
 let string = `This is a ${test}`;
 
 // Output: This is a test
+```
+
+#### Modules
+
+##### Export
+```javascript
+// library.js
+export class LibraryName {
+    constructor () { }
+
+    testFunction() { }
+}
+```
+
+##### Import
+```javascript
+// testFile1.js
+import * as libraryName from 'librayPath';
+librayName.testFunction();
+
+// testFile2.js
+import { LibraryName } fron 'libraryPath';
+LibraryName.testFunction();
 ```
