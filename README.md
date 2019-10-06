@@ -73,6 +73,8 @@ LibraryName.testFunction();
 
 #### Default parameters
 ES6 introduces default parameters.
+
+**Example**
 ```javascript
 const logName(name = 'defaultName') {
     console.log(name);
@@ -82,3 +84,57 @@ logName('TestName'); // Output: TestName
 
 logName(); // Output: defaultName
 ```
+
+#### Array functions
+
+##### ForEach
+the forEach function iterates over an array and passes the values from that array into a designated function.
+
+**Example**
+```javascript
+const numbers = [1, 2, 3];
+
+function timesTwo(number){
+    console.log(number * 2);
+}
+
+numbers.forEach(timesTwo);
+// Output 1: 2
+// Output 2: 4
+// Output 3: 6
+```
+
+##### Map
+The map functions allows you to perform an action to each element in an array, and create a new array containing the results.
+
+**Example**
+```javascript
+const numbers = [1, 2, 3];
+
+function timesTwo(number){
+    return number * 2;
+}
+
+const doubleNumbers = numbers.map(timesTwo);
+
+console.log(doubleNumbers); // Output: [2, 4, 6]
+```
+
+##### Filter
+The filter function checks each element in an array to see if it meets a certain condition and adds it to a new array if it does. In doing so, it creates a new subset of the original array.
+
+**Example**
+```javascript
+const numbers = [1, 2, 3];
+
+function isOdd(number){
+    if(number % 2){
+        return number;
+    }
+}
+const oddNumbers = numbers.filter(isOdd);
+
+console.log(oddNumbers); // Output
+```
+
+##### Reduce
