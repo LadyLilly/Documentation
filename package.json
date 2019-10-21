@@ -1,0 +1,23 @@
+{
+  "name": "Documentation",
+  "version": "1.0.0",
+  "description": "Documentation about JavaScript ES6+ features",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LadyLilly/Documentation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LadyLilly/Documentation/issues"
+  },
+  "homepage": "https://github.com/LadyLilly/Documentation#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
