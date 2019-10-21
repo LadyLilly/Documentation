@@ -138,3 +138,9 @@ console.log(oddNumbers); // Output
 ```
 
 ##### Reduce
+
+##### Work with this project
+
+```bash
+npm install
+```

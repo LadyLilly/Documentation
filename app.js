@@ -1,7 +1,37 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
+const mongoose = require('mongoose');
+const config = require('./config.database');
 const app = express();
 
-app.use(express.static(__dirname + '/public'));
+mongoose.connect(config.datanase);
+let db = mongoose.connection();
+
+// Checck connection
+db.once('open', () => {
+    console.log('Connected to MongoDB');
+});
+
+// Check for db errors
+db.on('error', (err) => {
+    console.log(err);
+});
+
+// Load models
+let Article = require('./models/article');
+
+// Load view engine
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
+// Body parser
+app.use(bodyParser.urlencoded({ extended: false }));
+// Parse application/json
+app.use(bodyParser.json());
+
+// Set public folder
+app.use(express.static(path.join(__dirname), '/public'));
 
 /**
  * Test page
